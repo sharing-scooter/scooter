@@ -12,7 +12,6 @@
 
 .box {
     width: 100%;
-    height: fit-content;
     min-height: 200px;
     /* background-color: aqua; */
     display: flex;
@@ -104,9 +103,10 @@ section {
 }
 
 section .home_loge>img {
-    width: fit-content;
+    width: auto;
     height: 350px;
-
+        max-width: 250px;
+        object-fit: contain;
 }
 
 .home_titleBox h2 {
@@ -124,7 +124,6 @@ section .home_loge>img {
 
 main {
     width: 100%;
-    height: fit-content;
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
@@ -133,7 +132,6 @@ main {
 
 .overview_cs {
     width: 100%;
-    height: fit-content;
     max-width: 1140px;
     background-color: #fff;
     margin: 15px 0;
@@ -178,14 +176,11 @@ main {
     margin-top: 10px;
 }
 
-.overview_list li {
-    width: fit-content;
-    height: fit-content;
-}
 
 .overview_list li img {
     width: 200px;
-    height: fit-content;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -233,14 +228,12 @@ main {
 
 .overview_list3 {
     width: 100%;
-    height: fit-content;
     overflow: hidden;
 
 }
 
 .mianBoxHis-box {
     width: 100%;
-    height: fit-content;
     min-height: 100px;
     display: flex;
     flex-flow: row nowrap;
@@ -343,7 +336,6 @@ main {
 
 .overview_list6 {
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -353,18 +345,20 @@ main {
 
 .overview_list6 li {
     width: 30%;
-    height: fit-content;
+    height: auto;
+    object-fit: contain;
+    margin: 5px 0;
 }
 
 .overview_list6 li img {
     width: 100%;
-    height: fit-content;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
 .overview_list7 {
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,13 +369,15 @@ main {
 
 .overview_list7 img:nth-child(1) {
     width: 50%;
-    height: fit-content;
+    height: auto;
+        object-fit: contain;
     border-radius: 10px;
 }
 
 .overview_list7 img:nth-child(2) {
     width: 40%;
-    height: fit-content;
+    height: auto;
+        object-fit: contain;
     border-radius: 10px;
 }
 
@@ -394,7 +390,6 @@ main {
 
 .overview_list8 li {
     width: 45%;
-    height: fit-content;
     min-height: 150px;
     background-color: #DBDBEF;
     border-radius: 5px;
@@ -414,7 +409,6 @@ main {
 
 .overview_list10 {
     width: 90%;
-    height: fit-content;
     min-height: 100px;
     border: 1px solid #9999991f;
     margin: 10px;
@@ -456,13 +450,11 @@ main {
 
 .overview_list11 li {
     width: 25%;
-    height: fit-content;
     min-height: 100px;
 }
 
 .overview_list12 {
     width: 90%;
-    height: fit-content;
     list-style-type: disc;
     box-sizing: border-box;
     padding: 0 30px;
@@ -483,7 +475,6 @@ main {
 
 .overview_list13 li {
     width: 45%;
-    height: fit-content;
     min-height: 50px;
     background-color: #DBDBEF;
     border-radius: 5px;
@@ -494,27 +485,27 @@ main {
 
 .overview_list14 {
     width: 100%;
-    height: fit-content;
     box-sizing: border-box;
     padding: 0 20px;
 }
 
 .overview_list14 img {
     width: 300px;
-    height: fit-content;
+    height: auto;
+        object-fit: contain;
     margin: 10px 0;
 }
 
 .overview_list15 {
     width: 100%;
-    height: fit-content;
     box-sizing: border-box;
     padding: 0 20px;
 }
 
 .overview_list15 img {
     height: 300px;
-    width: fit-content;
+    height: auto;
+        object-fit: contain;
     margin: 10px 0;
 }
 
@@ -557,6 +548,12 @@ main {
 }
 
 @media (max-width: 767px) {
+    section .home_loge>img {
+        width: auto;
+        height: 350px;
+        max-width: 250px;
+        object-fit: contain;
+    }
     .head_nav_list {
         display: flex;
         width: 100%;
@@ -602,8 +599,12 @@ main {
     }
 
     .overview_list li img {
-        width: calc(90% - 20px);
-        height: fit-content;
+        /* width: calc(90% - 20px); */
+        width: 200px;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
     }
 
     .overview_title_00 {
@@ -622,7 +623,6 @@ main {
 
     .head_nav_list2 {
         width: 100%;
-        height: fit-content;
         box-sizing: border-box;
         padding: 0 5px;
         display: none;
@@ -652,18 +652,38 @@ main {
     }
 
     .overview_list2 li {
-        width: calc(90% - 20px);
-        height: fit-content;
+        width: 90%;
         margin-top: 10px;
     }
 
     .overview_list4 {
         width: 100%;
-        height: fit-content;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-around;
+    }
+    .overview_list6 {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+        /* padding: 0 20px; */
+        list-style-type: none;
+    }
+    
+    .overview_list6 li {
+        width: 30%;
+        height: auto;
+    }
+    
+    .overview_list6 li img {
+        width: 100%;
+        height: auto;
+        max-height: 120px;
+        object-fit: contain;
+        border-radius: 10px;
     }
 
     .mianBoxHis_box2 {
@@ -694,7 +714,6 @@ main {
 
     .overview_list15 {
         width: 100%;
-        height: fit-content;
         box-sizing: border-box;
         padding: 0 20px;
         display: flex;
@@ -704,8 +723,11 @@ main {
 
     .overview_list15 img {
         width: 90%;
-        height: fit-content;
+        height: auto;
+        object-fit: contain;
         margin: 10px 0;
     }
 
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 }
