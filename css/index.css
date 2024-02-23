@@ -9,6 +9,28 @@
         font-size: 12px;
     }
 }
+.map {
+    background-image: url("../image/map.png");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    min-height: 300px;
+  }
+.map li{
+    font-size: 14px;
+    margin:10px 10px 0px 5px;
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map li a{
+    text-decoration: underline;
+    color: white;
+}
 
 .box {
     width: 100%;
